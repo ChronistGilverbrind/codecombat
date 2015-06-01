@@ -260,7 +260,7 @@ module.exports = class CampaignView extends RootView
 
   annotateLevel: (level) ->
     level.position ?= { x: 10, y: 10 }
-    level.locked = not me.ownsLevel level.original
+    #level.locked = not me.ownsLevel level.original
     level.locked = false if @levelStatusMap[level.slug] in ['started', 'complete']
     level.locked = false if @editorMode
     level.locked = false if @campaign?.get('name') is 'Auditions'
